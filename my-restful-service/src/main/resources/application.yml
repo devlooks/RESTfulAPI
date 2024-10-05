@@ -1,0 +1,38 @@
+server:
+  port: 8088
+
+logging:
+  level:
+    org.springframework: debug
+
+spring:
+  message:
+    basename: messages
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+  jpa:
+    hibernate:
+      ddl-auto: create-drop # 서버 생성시 create - drop
+    show-sql: true # 실행시 sql 로그 생성
+    defer-datasource-initialization: true # sql 파일을 읽어 서버구동시 데이터 insert
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
+#  security:
+#    user:
+#      name: username
+#      password: passw0rd
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
