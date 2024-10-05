@@ -6,7 +6,7 @@ RestFul 강의 공부 내용입니다.
 - HETEOAS 
 - Spring Security
 - JPA
-- ResponseEntityExceptionHandler + JPA 을 이용한 CustomException
+- ResponseEntityExceptionHandler + AOP 을 이용한 CustomException
 - Swagger
 - Actuator
 - lombok
